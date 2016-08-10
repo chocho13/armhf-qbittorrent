@@ -29,8 +29,13 @@ $ docker run -d \
 * `/downloads`: Download location
 It is probably a good idea to add `--restart=always` so the container restarts if it goes down.
 
-You can map container `6881` port to some random port number and same thing for webui port (don't change in the qBittorrent settings) :
-   -p 8181:8080 -p 32620:6881/tcp -p 32620:6881/udp \
+You can map container `6881` port to some random port number and same thing for webui port `8080`, don't change in the qBittorrent settings but in `docker run` command :
+$ docker run -d \
+    -p 8181:8080 -p 32620:6881/tcp -p 32620:6881/udp \
+    -v $PWD/config:/root/.config/qBittorrent \
+    -v $PWD/data:/root/.local/share/data/qBittorrent \
+    -v $PWD/downloads:/root/Downloads \
+    chocho13/armhf-qbittorrent
 
 Note: For the container to run, the legal notice had to be automatically accepted. By running the container, you are accepting its terms. Toggle the flag in `qBittorrent.conf` to display the notice again.
 
