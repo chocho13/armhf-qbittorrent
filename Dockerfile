@@ -1,4 +1,5 @@
 FROM armv7/armhf-ubuntu:16.04
+LABEL architecture="ARMv7"
 
 RUN apt-get update && \
     apt-get -y --no-install-recommends install software-properties-common && \
