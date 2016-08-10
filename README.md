@@ -1,6 +1,6 @@
 * [`latest` is the latest packaged stable Ubuntu package version (currently 3.3.x)](https://github.com/chocho13/armhf-qbittorrent/blob/master/Dockerfile)
 
-[Docker](https://www.docker.com/) image for armhf [qBittorrent](http://www.qbittorrent.org/) NoX (headless with remote web interface).
+[Docker](https://www.docker.com/) image for [qBittorrent](http://www.qbittorrent.org/) NoX (headless with remote web interface) for armhf based on [armv7/armhf-ubuntu:16.04](https://hub.docker.com/r/armv7/armhf-ubuntu/)
 
 ###Usage
 
