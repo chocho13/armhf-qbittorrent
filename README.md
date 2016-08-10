@@ -24,9 +24,9 @@ $ docker run -d \
 
 ... to have webUI running on [http://localhost:8080](http://localhost:8080) (username: `admin`, password: `adminadmin`) with config in the following locations mounted:
 
-/config: qBittorrent configuration files
-/data: Torrent files
-/downloads: Download location
+* `/config`: qBittorrent configuration files
+* `/data`: Torrent files
+* `/downloads`: Download location
 It is probably a good idea to add `--restart=always` so the container restarts if it goes down.
 
 You can map container `6881` port to some random port number and same thing for webui port (don't change in the qBittorrent settings) :
