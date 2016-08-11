@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # Default configuration file
-if [ ! -f /config/qBittorrent.conf ]
+if [ ! -f /root/.config/qBittorrent/qBittorrent.conf ]
 then
 	cp /default/qBittorrent.conf /root/.config/qBittorrent/qBittorrent.conf
 fi
