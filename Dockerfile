@@ -2,11 +2,7 @@ FROM armv7/armhf-ubuntu:16.04
 LABEL architecture="ARMv7"
 
 RUN apt-get update && \
-    apt-get -y --no-install-recommends install software-properties-common && \
-    add-apt-repository ppa:qbittorrent-team/qbittorrent-stable && \
-    apt-get update && \
     apt-get -y --no-install-recommends install qbittorrent-nox && \
-    apt-get -y purge software-properties-common && \
     apt-get clean autoclean && \
     apt-get autoremove -y && \
     rm -rf /var/lib/{apt,dpkg,cache,log}/
